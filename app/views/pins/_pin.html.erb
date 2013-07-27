@@ -5,7 +5,7 @@
   <%= pin.description %>
 </p>
 <p class="username">
-		Posted by <%= pin.user.name %>
+		Posted by <%= link_to pin.user.name, pin.user %>
 </p>
   <%= link_to 'Show', pin %>
   <% if current_user == pin.user %>

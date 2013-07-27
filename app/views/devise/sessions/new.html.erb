@@ -1,13 +1,17 @@
 <h2>Sign in</h2>
 
+<div class="well" id="devise">
 <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: {class: 'form-horizontal'}) do |f| %>
  <%= f.input :email %>
  <%= f.input :password %>
  <%= f.input :remember_me, as: :boolean %>
 
 
- <div class="form-actions">
+ <div class="submit">
   	<%= f.submit "Sign in", class: 'btn btn-primary' %>
   	<p><%= render "devise/shared/links" %></p>
   </div>
+</div>
 <% end %>
+
+

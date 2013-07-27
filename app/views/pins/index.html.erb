@@ -1,9 +1,13 @@
+<div class="container">
+	<% unless user_signed_in? %>
+	  <%= render 'pages/home' %>
+	<% end %>
 
-<% unless user_signed_in? %>
-  <%= render 'pages/home' %>
-<% end %>
-
-<div id="pins">
-  <%= render @pins %>
+	<div id="pins">
+	  <%= render @pins %>
+	</div>
 </div>
 
+<div class="pages">
+  <%= will_paginate @pins %>
+</div>
